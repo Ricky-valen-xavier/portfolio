@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Ricky Valen Xavier — Portfolio</title>
+  <meta name="description" content="Ricky Valen Xavier — IT Trainee at Sashma Group. Full-stack development, data regularisation, and machine learning. MCA graduate in Chennai, India.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%23000'/%3E%3Ctext x='32' y='41' font-family='-apple-system,Helvetica,Arial,sans-serif' font-size='24' font-weight='700' text-anchor='middle' fill='%23fff'%3ERX%3C/text%3E%3C/svg%3E">
+
+  <!-- Font: Apple's SF Pro renders automatically on Apple devices through the system
+       font stack. Inter (the closest open alternative) is the fallback everywhere else. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..700&display=swap">
+
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ================================================================
+       NAVIGATION
+       ================================================================ -->
+  <nav class="nav" id="nav" aria-label="Primary">
+    <div class="nav__inner">
+      <a class="nav__logo" href="#top">Ricky Valen Xavier</a>
+
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li class="nav__mobile-only"><a href="#contact">Contact</a></li>
+      </ul>
+
+      <a class="nav__cta" href="#contact" data-magnetic>Get in touch</a>
+
+      <button class="nav__toggle" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <!-- ================================================================
+         HERO — photo in the middle, name emerges from behind it on scroll
+         ================================================================ -->
+    <section class="hero theme-dark" id="top" data-nav-theme="dark">
+      <div class="hero__sticky">
+        <div class="hero__bg" aria-hidden="true"></div>
+
+        <div class="hero__top">
+          <p class="hero__badge intro" style="--i:0"><span class="dot" aria-hidden="true"></span>Currently at Sashma Group</p>
+          <p class="hero__eyebrow intro" style="--i:1">IT Trainee · Full-Stack Developer</p>
+        </div>
+
+        <div class="hero__stage">
+          <div class="hero__halo hero__halo--soft" aria-hidden="true"></div>
+          <div class="hero__halo" aria-hidden="true"></div>
+
+          <!-- The name sits BEHIND the photo and flies out from behind it as you scroll. -->
+          <h1 class="hero__name" aria-label="Ricky Valen Xavier">
+            <span class="hero__line">Ricky</span>
+            <span class="hero__line">Xavier</span>
+          </h1>
+
+          <!-- PHOTO: save your image as assets/photo.jpg (or change the src below).
+               For a magazine-cover look, use a PNG with the background removed and
+               add the class "hero__photo--cutout" to this figure. -->
+          <figure class="hero__photo">
+            <div class="hero__frame">
+              <img class="hero__img" src="assets/photo.jpg" alt="Portrait of Ricky Valen Xavier"
+                   onerror="this.closest('.hero__photo').classList.add('is-empty')">
+              <div class="hero__placeholder" aria-hidden="true">
+                <span>Add your photo<br><code>assets/photo.jpg</code></span>
+                <svg viewBox="0 0 200 250">
+                  <defs>
+                    <linearGradient id="silhouette" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#fff" stop-opacity=".3" />
+                      <stop offset="1" stop-color="#fff" stop-opacity=".04" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="100" cy="96" r="42" fill="url(#silhouette)" />
+                  <path d="M18 250c0-54 37-94 82-94s82 40 82 94z" fill="url(#silhouette)" />
+                </svg>
+              </div>
+            </div>
+          </figure>
+        </div>
+
+        <div class="hero__details">
+          <p class="hero__subtitle">MCA graduate building full-stack systems at Sashma Group, with a foundation in data science, AI and cyber security.</p>
+          <div class="hero__ctas">
+            <a class="btn btn--primary" href="#work" data-magnetic>View my work</a>
+            <a class="link-arrow" href="#contact">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="hero__scroll" aria-hidden="true">
+          <div class="intro" style="--i:3"><span>Scroll</span><i></i></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         ABOUT — words light up as you scroll
+         ================================================================ -->
+    <section class="statement theme-dark" id="about" data-nav-theme="dark">
+      <div class="statement__sticky">
+        <div class="container">
+          <p class="eyebrow">About</p>
+          <p class="statement__text" data-words>
+            I’m an MCA graduate from SRM Institute of Science and Technology with a foundation in data science,
+            artificial intelligence and cyber security. At Sashma Group I own HSE end to end — building it full stack
+            and keeping its data clean and regularised. I like problems where careful data work meets a well-built interface.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         HIGHLIGHTS — bento grid
+         ================================================================ -->
+    <section class="section theme-light" id="highlights" data-nav-theme="light">
+      <div class="container container--wide">
+        <header class="section__head reveal" data-speed="-0.06">
+          <p class="eyebrow">At a glance</p>
+          <h2 class="headline" data-split>Highlights.</h2>
+        </header>
+
+        <div class="bento" data-stagger>
+          <article class="tile tile--4 theme-dark reveal" data-spotlight data-tilt>
+            <div class="tile__burst" aria-hidden="true"></div>
+            <p class="tile__label">MCA — final CGPA</p>
+            <div>
+              <p class="tile__stat"><span class="gradient-text" data-count="9.0">9.0</span></p>
+              <p class="tile__caption">Master of Computer Applications, completed 2026 at SRM Institute of Science and Technology, Ramapuram, Chennai.</p>
+            </div>
+          </article>
+
+          <article class="tile tile--2 reveal" data-spotlight data-tilt>
+            <p class="tile__label">Projects built</p>
+            <p class="tile__stat"><span class="gradient-text"><span data-count="6">6</span></span></p>
+          </article>
+
+          <article class="tile tile--2 reveal" data-spotlight data-tilt>
+            <p class="tile__label">Certifications</p>
+            <p class="tile__stat"><span class="gradient-text"><span data-count="4">4</span></span></p>
+          </article>
+
+          <article class="tile tile--4 tile--feature theme-dark reveal" data-spotlight data-tilt>
+            <p class="tile__label">Now building</p>
+            <p class="tile__quote">HSE — a full-stack platform I own end to end, from the interface down to keeping its data regularised.</p>
+          </article>
+
+          <article class="tile tile--3 reveal" data-spotlight data-tilt>
+            <p class="tile__label">Based in</p>
+            <p class="tile__big">Chennai, India</p>
+          </article>
+
+          <article class="tile tile--3 theme-dark reveal" data-spotlight data-tilt>
+            <p class="tile__label">Currently</p>
+            <p class="tile__big">IT Trainee at Sashma Group</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         EXPERIENCE — timeline
+         ================================================================ -->
+    <section class="section theme-dark" id="experience" data-nav-theme="dark">
+      <div class="container">
+        <header class="section__head reveal" data-speed="-0.06">
+          <p class="eyebrow">Experience</p>
+          <h2 class="headline" data-split><span class="gradient-text">Where I’ve made an impact.</span></h2>
+        </header>
+
+        <div class="timeline">
+          <div class="timeline__bar" aria-hidden="true"></div>
+          <ol class="timeline__list">
+            <li class="role reveal">
+              <div class="role__meta">
+                <p class="role__dates">Sep 2026 — Present</p>
+                <p class="role__place">Chennai, India</p>
+              </div>
+              <div class="role__body">
+                <h3 class="role__title">IT Trainee</h3>
+                <p class="role__company">Sashma Group</p>
+                <ul class="role__points" data-stagger>
+                  <li>Promoted from intern after three months to take on development work of my own.</li>
+                  <li>Primary owner of HSE, handling the full stack from the interface through to the database.</li>
+                  <li>Maintain data regularisation across the platform so records stay consistent and reliable.</li>
+                </ul>
+                <ul class="role__tags" aria-label="Skills used" data-stagger>
+                  <li class="tag">Full-Stack Development</li>
+                  <li class="tag">Data Regularisation</li>
+                  <li class="tag">SQL</li>
+                  <li class="tag">Python</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="role reveal">
+              <div class="role__meta">
+                <p class="role__dates">Jul 2026 — Sep 2026</p>
+                <p class="role__place">Chennai, India</p>
+              </div>
+              <div class="role__body">
+                <h3 class="role__title">IT Intern</h3>
+                <p class="role__company">Sashma Group</p>
+                <ul class="role__points" data-stagger>
+                  <li>Joined as an intern supporting day-to-day IT operations across the business.</li>
+                  <li>Took on development tasks that led to the HSE platform and a move into a trainee role.</li>
+                </ul>
+                <ul class="role__tags" aria-label="Skills used" data-stagger>
+                  <li class="tag">IT Operations</li>
+                  <li class="tag">Databases</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="role reveal">
+              <div class="role__meta">
+                <p class="role__dates">Dec 2023 — Jan 2024</p>
+                <p class="role__place">Chennai, India</p>
+              </div>
+              <div class="role__body">
+                <h3 class="role__title">IT Support Intern</h3>
+                <p class="role__company">DP World</p>
+                <ul class="role__points" data-stagger>
+                  <li>Supported daily tech operations by fixing system issues, checking device health and keeping workstations running for teams across the logistics site.</li>
+                  <li>Troubleshot network and software problems, documented common fixes and helped improve response times for internal support requests.</li>
+                </ul>
+                <ul class="role__tags" aria-label="Skills used" data-stagger>
+                  <li class="tag">Troubleshooting</li>
+                  <li class="tag">Networking</li>
+                  <li class="tag">Documentation</li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="role reveal">
+              <div class="role__meta">
+                <p class="role__dates">Jun 2022 — Mar 2023</p>
+                <p class="role__place">Chennai, India</p>
+              </div>
+              <div class="role__body">
+                <h3 class="role__title">Assistant Leader, Women Empowerment Team</h3>
+                <p class="role__company">Loyola College (Autonomous)</p>
+                <ul class="role__points" data-stagger>
+                  <li>Ran awareness events in and around the college on health and on government laws that benefit women.</li>
+                  <li>Collaborated with local government bodies on events promoting financial independence.</li>
+                </ul>
+                <ul class="role__tags" aria-label="Skills used" data-stagger>
+                  <li class="tag">Leadership</li>
+                  <li class="tag">Event Organisation</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         INTERLUDE — zooming statement, white wipe into the next section
+         ================================================================ -->
+    <section class="zoom" aria-label="Philosophy" data-nav-theme="dark">
+      <div class="zoom__sticky">
+        <div class="zoom__panel" aria-hidden="true"></div>
+        <p class="zoom__text"><span>Analyse.</span> <span>Build.</span> <span>Refine.</span></p>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         WORK — pinned; scrolling down moves the projects sideways
+         ================================================================ -->
+    <section class="work theme-light" id="work" data-nav-theme="light">
+      <div class="work__sticky">
+        <div class="container container--wide work__head">
+          <header class="section__head reveal">
+            <p class="eyebrow">Selected work</p>
+            <h2 class="headline" data-split>Projects.</h2>
+          </header>
+          <p class="work__count" aria-hidden="true"><span data-work-index>01</span> / <span data-work-total>06</span></p>
+        </div>
+
+        <ul class="work__track">
+          <li class="card theme-dark">
+            <div class="card__media">
+              <!-- Layered records snapping into alignment: full-stack platform + data regularisation -->
+              <div class="card__art">
+                <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <defs>
+                    <radialGradient id="hse-glow" cx="50%" cy="34%" r="62%">
+                      <stop offset="0" stop-color="#fff" stop-opacity=".2" />
+                      <stop offset="1" stop-color="#fff" stop-opacity="0" />
+                    </radialGradient>
+                    <linearGradient id="hse-panel" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#fff" stop-opacity=".15" />
+                      <stop offset="1" stop-color="#fff" stop-opacity=".02" />
+                    </linearGradient>
+                  </defs>
+                  <rect width="400" height="320" fill="#000" />
+                  <rect width="400" height="320" fill="url(#hse-glow)" />
+                  <g transform="translate(26.9 23.3) scale(0.865)">
+                  <g fill="url(#hse-panel)" stroke="#fff">
+                    <rect x="104" y="54" width="192" height="46" rx="10" stroke-opacity=".16" />
+                    <rect x="84" y="92" width="232" height="56" rx="12" stroke-opacity=".3" />
+                    <rect x="62" y="140" width="276" height="122" rx="16" stroke-opacity=".55" />
+                  </g>
+                  <line x1="196" y1="156" x2="196" y2="246" stroke="#fff" stroke-opacity=".3" stroke-width="1.5" stroke-dasharray="4 6" />
+                  <g stroke="#fff" stroke-width="7" stroke-linecap="round">
+                    <line x1="86" y1="174" x2="180" y2="174" stroke-opacity=".9" />
+                    <line x1="212" y1="174" x2="314" y2="174" stroke-opacity=".3" />
+                    <line x1="86" y1="201" x2="180" y2="201" stroke-opacity=".55" />
+                    <line x1="212" y1="201" x2="272" y2="201" stroke-opacity=".22" />
+                    <line x1="86" y1="228" x2="180" y2="228" stroke-opacity=".7" />
+                    <line x1="212" y1="228" x2="300" y2="228" stroke-opacity=".26" />
+                  </g>
+                  </g>
+                </svg>
+              </div>
+              <span class="card__index">01</span>
+            </div>
+            <div class="card__body">
+              <p class="card__kicker">Sashma Group · 2026</p>
+              <h3 class="card__title">HSE</h3>
+              <p class="card__text">A platform I own as primary developer — built full stack, with ongoing data regularisation keeping its records consistent.</p>
+            </div>
+          </li>
+          <li class="card theme-dark">
+            <div class="card__media">
+              <!-- A loose pile of files on the left, filed into one folder per extension on the right -->
+              <div class="card__art">
+                <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <defs>
+                    <radialGradient id="sort-glow" cx="50%" cy="48%" r="62%">
+                      <stop offset="0" stop-color="#fff" stop-opacity=".18" />
+                      <stop offset="1" stop-color="#fff" stop-opacity="0" />
+                    </radialGradient>
+                    <linearGradient id="sort-file" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#fff" stop-opacity=".6" />
+                      <stop offset="1" stop-color="#fff" stop-opacity=".22" />
+                    </linearGradient>
+                    <linearGradient id="sort-folder" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#fff" stop-opacity=".22" />
+                      <stop offset="1" stop-color="#fff" stop-opacity=".05" />
+                    </linearGradient>
+                  </defs>
+                  <rect width="400" height="320" fill="#000" />
+                  <rect width="400" height="320" fill="url(#sort-glow)" />
+
+                  <!-- the unsorted pile -->
+                  <g fill="url(#sort-file)">
+                    <path d="M77 100h24l15 15v36a5 5 0 0 1-5 5H77a5 5 0 0 1-5-5v-46a5 5 0 0 1 5-5z" />
+                    <path d="M89 140h24l15 15v36a5 5 0 0 1-5 5H89a5 5 0 0 1-5-5v-46a5 5 0 0 1 5-5z" />
+                    <path d="M71 180h24l15 15v36a5 5 0 0 1-5 5H71a5 5 0 0 1-5-5v-46a5 5 0 0 1 5-5z" />
+                  </g>
+                  <g fill="#000" fill-opacity=".4">
+                    <path d="M101 100l15 15h-15z" /><path d="M113 140l15 15h-15z" /><path d="M95 180l15 15h-15z" />
+                  </g>
+
+                  <!-- filed across -->
+                  <g stroke="#fff" stroke-opacity=".5" stroke-width="2" stroke-dasharray="4 6">
+                    <line x1="146" y1="118" x2="180" y2="118" />
+                    <line x1="146" y1="172" x2="180" y2="172" />
+                    <line x1="146" y1="226" x2="180" y2="226" />
+                  </g>
+                  <g fill="#fff" fill-opacity=".7">
+                    <path d="M180 113v10l10-5z" /><path d="M180 167v10l10-5z" /><path d="M180 221v10l10-5z" />
+                  </g>
+
+                  <!-- one folder per extension -->
+                  <g fill="url(#sort-folder)" stroke="#fff" stroke-opacity=".55" stroke-width="2">
+                    <path d="M212 96h24l6 8h68a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6h-98a6 6 0 0 1-6-6v-32a6 6 0 0 1 6-6z" />
+                    <path d="M212 150h24l6 8h68a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6h-98a6 6 0 0 1-6-6v-32a6 6 0 0 1 6-6z" />
+                    <path d="M212 204h24l6 8h68a6 6 0 0 1 6 6v24a6 6 0 0 1-6 6h-98a6 6 0 0 1-6-6v-32a6 6 0 0 1 6-6z" />
+                  </g>
+                  <g fill="#fff" font-size="16" font-weight="600" text-anchor="middle" letter-spacing="-0.5">
+                    <text x="276" y="129">.jpg</text>
+                    <text x="276" y="183">.pdf</text>
+                    <text x="276" y="237">.py</text>
+                  </g>
+                </svg>
+              </div>
+              <span class="card__index">02</span>
+            </div>
+            <div class="card__body">
+              <p class="card__kicker">Automation · Python</p>
+              <h3 class="card__title">File Sorter</h3>
+              <p class="card__text">Sorts a folder by file type, creating a folder per extension and moving or copying each file into it. Built with Google Antigravity.</p>
+            </div>
+          </li>
+          <li class="card theme-dark">
+            <div class="card__media">
+              <!-- YOLO bounding boxes around a leaf and a bottle: biodegradable vs non-biodegradable -->
+              <div class="card__art">
+                <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <defs>
+                    <radialGradient id="waste-glow" cx="50%" cy="45%" r="60%">
+                      <stop offset="0" stop-color="#fff" stop-opacity=".18" />
+                      <stop offset="1" stop-color="#fff" stop-opacity="0" />
+                    </radialGradient>
+                    <linearGradient id="waste-fill" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" stop-color="#fff" stop-opacity=".55" />
+                      <stop offset="1" stop-color="#fff" stop-opacity=".12" />
+                    </linearGradient>
+                  </defs>
+                  <rect width="400" height="320" fill="#000" />
+                  <rect width="400" height="320" fill="url(#waste-glow)" />
+
+                  <g transform="translate(0 -22)">
+                  <!-- leaf -->
+                  <path d="M150 108c34 12 40 56 8 88-32-20-38-62-8-88z" fill="url(#waste-fill)" />
+                  <path d="M150 108c-6 30 2 60 8 88" stroke="#000" stroke-opacity=".55" stroke-width="2.5" fill="none" />
+                  <!-- bottle -->
+                  <g fill="url(#waste-fill)">
+                    <rect x="242" y="186" width="46" height="72" rx="12" />
+                    <rect x="256" y="166" width="18" height="26" rx="5" />
+                    <rect x="252" y="156" width="26" height="12" rx="4" />
+                  </g>
+
+                  <!-- detection brackets -->
+                  <g stroke="#fff" stroke-width="3" fill="none" stroke-linecap="square">
+                    <path d="M110 118v-22h24M190 96h24v22M214 198v22h-24M134 220h-24v-22" stroke-opacity=".95" />
+                    <path d="M232 170v-26h26M288 144h26v26M314 242v26h-26M258 268h-26v-26" stroke-opacity=".6" />
+                  </g>
+                  <!-- scan line -->
+                  <line x1="60" y1="160" x2="340" y2="160" stroke="#fff" stroke-opacity=".35" stroke-width="1.5" stroke-dasharray="7 9" />
+                  </g>
+                </svg>
+              </div>
+              <span class="card__index">03</span>
+            </div>
+            <div class="card__body">
+              <p class="card__kicker">Machine Learning · CNN</p>
+              <h3 class="card__title">Waste Detection</h3>
+              <p class="card__text">A detection system built on CNN models including YOLO that classifies waste as biodegradable or non-biodegradable.</p>
+            </div>
+          </li>
+          <li class="card theme-dark">
+            <div class="card__media">
+              <!-- Hand landmark skeleton: joints and bones tracked across an open hand -->
+              <div class="card__art">
+                <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <defs>
+                    <radialGradient id="asl-glow" cx="50%" cy="48%" r="58%">
+                      <stop offset="0" stop-color="#fff" stop-opacity=".2" />
+                      <stop offset="1" stop-color="#fff" stop-opacity="0" />
+                    </radialGradient>
+                  </defs>
+                  <rect width="400" height="320" fill="#000" />
+                  <rect width="400" height="320" fill="url(#asl-glow)" />
+
+                  <g transform="translate(10.2 -18) scale(0.978)">
+                  <g stroke="#fff" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".75">
+                    <!-- palm -->
+                    <path d="M200 262 162 232M200 262 178 190M200 262 200 186M200 262 222 190M200 262 242 200" />
+                    <path d="M162 232 178 190 200 186 222 190 242 200" stroke-opacity=".45" />
+                    <!-- fingers -->
+                    <path d="M162 232 142 212 128 196 116 182" />
+                    <path d="M178 190 172 158 168 138 165 120" />
+                    <path d="M200 186 200 150 200 128 200 108" />
+                    <path d="M222 190 228 154 232 134 235 116" />
+                    <path d="M242 200 252 174 258 158 262 144" />
+                  </g>
+
+                  <g fill="#fff">
+                    <circle cx="200" cy="262" r="6" />
+                    <g fill-opacity=".8">
+                      <circle cx="162" cy="232" r="4" /><circle cx="142" cy="212" r="4" /><circle cx="128" cy="196" r="4" />
+                      <circle cx="178" cy="190" r="4" /><circle cx="172" cy="158" r="4" /><circle cx="168" cy="138" r="4" />
+                      <circle cx="200" cy="186" r="4" /><circle cx="200" cy="150" r="4" /><circle cx="200" cy="128" r="4" />
+                      <circle cx="222" cy="190" r="4" /><circle cx="228" cy="154" r="4" /><circle cx="232" cy="134" r="4" />
+                      <circle cx="242" cy="200" r="4" /><circle cx="252" cy="174" r="4" /><circle cx="258" cy="158" r="4" />
+                    </g>
+                    <circle cx="116" cy="182" r="6" /><circle cx="165" cy="120" r="6" /><circle cx="200" cy="108" r="6" />
+                    <circle cx="235" cy="116" r="6" /><circle cx="262" cy="144" r="6" />
+                  </g>
+
+                  <rect x="100" y="90" width="188" height="184" rx="10" fill="none"
+                        stroke="#fff" stroke-opacity=".35" stroke-width="2" stroke-dasharray="8 8" />
+                  </g>
+                </svg>
+              </div>
+              <span class="card__index">04</span>
+            </div>
+            <div class="card__body">
+              <p class="card__kicker">Machine Learning · CNN</p>
+              <h3 class="card__title">ASL Sign Language Detection</h3>
+              <p class="card__text">A CNN-based model that identifies American Sign Language hand signs from images.</p>
+            </div>
+          </li>
+          <li class="card theme-dark">
+            <div class="card__media">
+              <!-- A handwritten digit on a pixel grid, with class-score bars beneath -->
+              <div class="card__art">
+                <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <defs>
+                    <radialGradient id="digit-glow" cx="50%" cy="40%" r="58%">
+                      <stop offset="0" stop-color="#fff" stop-opacity=".18" />
+                      <stop offset="1" stop-color="#fff" stop-opacity="0" />
+                    </radialGradient>
+                    <pattern id="digit-grid" width="26" height="26" patternUnits="userSpaceOnUse">
+                      <path d="M26 0H0v26" fill="none" stroke="#fff" stroke-opacity=".14" stroke-width="1" />
+                    </pattern>
+                  </defs>
+                  <rect width="400" height="320" fill="#000" />
+                  <rect width="400" height="320" fill="url(#digit-glow)" />
+                  <g transform="translate(14.4 10.6) scale(0.928)">
+                  <rect x="122" y="64" width="156" height="130" fill="url(#digit-grid)" />
+                  <rect x="122" y="64" width="156" height="130" fill="none"
+                        stroke="#fff" stroke-opacity=".4" stroke-width="2" stroke-dasharray="8 8" />
+
+                  <path d="M160 91c2-14 28-20 42-12 16 9 14 32-10 40 28 2 34 32 12 44-16 9-38 4-46-8"
+                        fill="none" stroke="#fff" stroke-width="15" stroke-linecap="round" stroke-linejoin="round" />
+
+                  <g fill="#fff">
+                    <rect x="130" y="236" width="16" height="18" rx="3" fill-opacity=".25" />
+                    <rect x="154" y="224" width="16" height="30" rx="3" fill-opacity=".3" />
+                    <rect x="178" y="206" width="16" height="48" rx="3" fill-opacity=".4" />
+                    <rect x="202" y="200" width="16" height="54" rx="3" />
+                    <rect x="226" y="230" width="16" height="24" rx="3" fill-opacity=".3" />
+                    <rect x="250" y="240" width="16" height="14" rx="3" fill-opacity=".2" />
+                  </g>
+                  <line x1="122" y1="258" x2="278" y2="258" stroke="#fff" stroke-opacity=".3" stroke-width="2" />
+                  </g>
+                </svg>
+              </div>
+              <span class="card__index">05</span>
+            </div>
+            <div class="card__body">
+              <p class="card__kicker">Machine Learning · CNN</p>
+              <h3 class="card__title">Handwritten Digit Recognition</h3>
+              <p class="card__text">A CNN model that classifies handwritten digits, with data pre-processing and performance evaluation.</p>
+            </div>
+          </li>
+          <li class="card theme-dark">
+            <div class="card__media">
+              <!-- Pixel platforms, a jump arc, coins and a flag: a six-level platformer -->
+              <div class="card__art">
+                <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true" shape-rendering="crispEdges">
+                  <defs>
+                    <radialGradient id="game-glow" cx="50%" cy="40%" r="60%">
+                      <stop offset="0" stop-color="#fff" stop-opacity=".16" />
+                      <stop offset="1" stop-color="#fff" stop-opacity="0" />
+                    </radialGradient>
+                  </defs>
+                  <rect width="400" height="320" fill="#000" />
+                  <rect width="400" height="320" fill="url(#game-glow)" />
+
+                  <g transform="translate(0 -17)">
+                  <!-- platforms -->
+                  <g fill="#fff">
+                    <rect x="48" y="246" width="112" height="14" fill-opacity=".9" />
+                    <rect x="48" y="260" width="112" height="6" fill-opacity=".3" />
+                    <rect x="186" y="198" width="92" height="14" fill-opacity=".9" />
+                    <rect x="186" y="212" width="92" height="6" fill-opacity=".3" />
+                    <rect x="298" y="142" width="76" height="14" fill-opacity=".9" />
+                    <rect x="298" y="156" width="76" height="6" fill-opacity=".3" />
+                  </g>
+
+                  <!-- jump arc -->
+                  <path d="M136 246C150 190 190 180 214 198" fill="none" stroke="#fff"
+                        stroke-opacity=".45" stroke-width="2.5" stroke-dasharray="2 9" stroke-linecap="round"
+                        shape-rendering="geometricPrecision" />
+
+                  <!-- player, mid-jump -->
+                  <g fill="#fff">
+                    <rect x="150" y="186" width="26" height="26" />
+                    <rect x="156" y="194" width="5" height="6" fill="#000" />
+                    <rect x="166" y="194" width="5" height="6" fill="#000" />
+                  </g>
+
+                  <!-- coins -->
+                  <g fill="#fff" fill-opacity=".55" shape-rendering="geometricPrecision">
+                    <circle cx="214" cy="160" r="7" /><circle cx="246" cy="146" r="7" /><circle cx="278" cy="134" r="7" />
+                  </g>
+
+                  <!-- flag -->
+                  <g fill="#fff">
+                    <rect x="340" y="88" width="5" height="54" />
+                    <path d="M345 92h30l-9 11 9 11h-30z" shape-rendering="geometricPrecision" />
+                  </g>
+                  </g>
+                </svg>
+              </div>
+              <span class="card__index">06</span>
+            </div>
+            <div class="card__body">
+              <p class="card__kicker">Game Development · Python</p>
+              <h3 class="card__title">Platformer Game</h3>
+              <p class="card__text">A platformer built in Pygame with six levels and an interactive level selection screen.</p>
+            </div>
+          </li>
+        </ul>
+
+        <div class="container container--wide">
+          <div class="work__progress" aria-hidden="true"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         SKILLS — scroll-reactive marquee + grouped lists
+         ================================================================ -->
+    <section class="section theme-dark" id="skills" data-nav-theme="dark">
+      <div class="container">
+        <header class="section__head section__head--center reveal">
+          <p class="eyebrow">Skills</p>
+          <h2 class="headline" data-split><span class="gradient-text">The toolkit.</span></h2>
+        </header>
+      </div>
+
+      <div class="marquee reveal">
+        <ul class="marquee__track">
+          <li class="pill pill--solid">Python</li>
+          <li class="pill">SQL</li>
+          <li class="pill">MySQL</li>
+          <li class="pill pill--solid">Full-Stack Development</li>
+          <li class="pill">MongoDB</li>
+          <li class="pill">Data Regularisation</li>
+          <li class="pill pill--solid">CNN</li>
+          <li class="pill">YOLO</li>
+          <li class="pill pill--solid">Automation</li>
+        </ul>
+      </div>
+      <div class="marquee marquee--reverse reveal">
+        <ul class="marquee__track">
+          <li class="pill">Computer Vision</li>
+          <li class="pill pill--solid">Data Analysis</li>
+          <li class="pill">Pygame</li>
+          <li class="pill">DBMS</li>
+          <li class="pill pill--solid">Ethical Hacking</li>
+          <li class="pill">IT Support</li>
+          <li class="pill">Troubleshooting</li>
+          <li class="pill pill--solid">Model Evaluation</li>
+          <li class="pill">Google Antigravity</li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <div class="skill-groups" data-stagger>
+          <div class="skill-group reveal">
+            <h3>Programming &amp; Development</h3>
+            <ul data-stagger>
+              <li>Python</li>
+              <li>Full-stack development</li>
+              <li>Scripting &amp; automation</li>
+              <li>Google Antigravity</li>
+              <li>Pygame</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Data &amp; Databases</h3>
+            <ul data-stagger>
+              <li>SQL — queries &amp; aggregations</li>
+              <li>MySQL</li>
+              <li>MongoDB</li>
+              <li>Database management</li>
+              <li>Data regularisation</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>AI &amp; Machine Learning</h3>
+            <ul data-stagger>
+              <li>Convolutional neural networks</li>
+              <li>YOLO object detection</li>
+              <li>Image classification</li>
+              <li>Data pre-processing</li>
+              <li>Model evaluation</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal">
+            <h3>IT &amp; Security</h3>
+            <ul data-stagger>
+              <li>Ethical hacking</li>
+              <li>Network troubleshooting</li>
+              <li>System &amp; device health</li>
+              <li>Technical documentation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         EDUCATION & CERTIFICATIONS
+         ================================================================ -->
+    <section class="section theme-light" id="education" data-nav-theme="light">
+      <div class="container">
+        <header class="section__head reveal" data-speed="-0.06">
+          <p class="eyebrow">Education</p>
+          <h2 class="headline" data-split>Always learning.</h2>
+        </header>
+
+        <div class="edu-grid" data-stagger>
+          <article class="edu-card reveal" data-spotlight data-tilt data-speed="0.03">
+            <p class="edu-card__years">2024 — 2026</p>
+            <h3 class="edu-card__title">Master of Computer Applications</h3>
+            <p class="edu-card__school">SRM Institute of Science and Technology, Ramapuram, Chennai</p>
+            <p class="edu-card__note">CGPA 9.0</p>
+          </article>
+          <article class="edu-card reveal" data-spotlight data-tilt data-speed="-0.03">
+            <p class="edu-card__years">2021 — 2024</p>
+            <h3 class="edu-card__title">Bachelor of Computer Applications</h3>
+            <p class="edu-card__school">Loyola College (Autonomous), Chennai</p>
+            <p class="edu-card__note">CGPA 7.61</p>
+          </article>
+          <article class="edu-card reveal" data-spotlight data-tilt>
+            <p class="edu-card__years">2019 — 2021</p>
+            <h3 class="edu-card__title">Higher Secondary, Science Stream</h3>
+            <p class="edu-card__school">Velankanni Matriculation Higher Secondary School</p>
+            <p class="edu-card__note">HSC 88.68%</p>
+          </article>
+        </div>
+
+        <h3 class="subhead reveal">Achievements &amp; certifications</h3>
+        <ul class="list" data-stagger>
+          <!-- TODO: replace the bracketed parts with the event/host college and the year. -->
+          <li class="list__row reveal"><span class="list__title">2nd place — Paper presentation, ENIAC 2k24</span><span class="list__meta">Loyola College · 2024</span></li>
+          <li class="list__row reveal"><span class="list__title">Introduction to MongoDB</span><span class="list__meta">MongoDB · Aug 2024</span></li>
+          <li class="list__row reveal"><span class="list__title">Database Management System</span><span class="list__meta">IIT Kharagpur · Jul–Sep 2024</span></li>
+          <li class="list__row reveal"><span class="list__title">Programming in Python</span><span class="list__meta">Internshala · Aug 2023</span></li>
+          <li class="list__row reveal"><span class="list__title">Ethical Hacking</span><span class="list__meta">Internshala · Sep 2022</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================================================================
+         CONTACT
+         ================================================================ -->
+    <section class="contact theme-dark" id="contact" data-nav-theme="dark">
+      <div class="contact__glow" aria-hidden="true"></div>
+      <div class="container reveal">
+        <p class="eyebrow">Contact</p>
+        <h2 class="contact__title" data-split><span class="gradient-text">Let’s make something great.</span></h2>
+        <p class="lead contact__lead">Open to new roles, collaborations and conversations. The fastest way to reach me is by email.</p>
+
+        <div class="contact__actions">
+          <a class="btn btn--primary btn--lg" href="mailto:rickyvalenx@gmail.com" data-magnetic>rickyvalenx@gmail.com</a>
+          <a class="link-arrow" href="assets/ricky-valen-xavier-resume.pdf" download>Download résumé</a>
+        </div>
+
+        <ul class="socials">
+          <li><a href="tel:+919940650286" data-magnetic>+91 99406 50286 <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5l5-5M4.5 3.5h4v4" /></svg></a></li>
+          <!-- Replace the two href="#" values below with your LinkedIn and GitHub profile URLs. -->
+          <li><a href="#" data-magnetic>LinkedIn <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5l5-5M4.5 3.5h4v4" /></svg></a></li>
+          <li><a href="https://www.github.com/Ricky-valen-xavier" data-magnetic>GitHub <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M3.5 8.5l5-5M4.5 3.5h4v4" /></svg></a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ================================================================
+       FOOTER
+       ================================================================ -->
+  <footer class="footer theme-dark">
+    <div class="container container--wide">
+      <p class="footer__name gradient-text reveal" data-split="chars" aria-hidden="true">Ricky Valen Xavier</p>
+      <div class="footer__inner">
+        <p>Copyright © <span data-year>2026</span> Ricky Valen Xavier. All rights reserved.</p>
+        <a class="footer__top" href="#top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

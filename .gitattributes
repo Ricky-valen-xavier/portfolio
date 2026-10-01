@@ -1,0 +1,13 @@
+# Normalise line endings in text files, and never touch binaries.
+# Without this, Git misreads the small résumé PDF as text and corrupts it on checkout.
+* text=auto
+
+*.pdf  binary
+*.jpg  binary
+*.jpeg binary
+*.png  binary
+*.gif  binary
+*.webp binary
+*.ico  binary
+*.woff  binary
+*.woff2 binary
